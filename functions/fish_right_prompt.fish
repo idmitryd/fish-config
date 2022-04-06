@@ -8,7 +8,7 @@ function fish_right_prompt -d "Write out the right prompt"
         set_color $fish_color_host
 	echo -n ' ('(hostname)')'
     end
-    set_color $fish_color_cwd
+    set_color $fish_color_command
     echo -n ' ['(date '+%H:%M:%S')']'
     set_color normal
 end
