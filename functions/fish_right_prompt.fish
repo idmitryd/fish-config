@@ -5,7 +5,7 @@ function fish_right_prompt -d "Write out the right prompt"
 	printf '%d' $last_status
     end
     if string match -q --invert '*dmitryd*' $hostname
-        set_color $fish_color_cwd
+        set_color $fish_color_host
 	echo -n ' ('(hostname)')'
     end
     set_color $fish_color_cwd
