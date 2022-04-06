@@ -1,0 +1,10 @@
+function fish_right_prompt -d "Write out the right prompt"
+    set -l last_status $status
+    if test $last_status -ne 0
+    	set_color $fish_color_error
+	printf '%d' $last_status
+    end
+    set_color $fish_color_cwd
+    echo -n ' ['(date '+%H:%M:%S')']'
+    set_color normal
+end
