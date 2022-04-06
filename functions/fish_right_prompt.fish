@@ -4,6 +4,10 @@ function fish_right_prompt -d "Write out the right prompt"
     	set_color $fish_color_error
 	printf '%d' $last_status
     end
+    if string match -q --invert '*dmitryd*' $hostname
+        set_color $fish_color_cwd
+	echo -n ' ('(hostname)')'
+    end
     set_color $fish_color_cwd
     echo -n ' ['(date '+%H:%M:%S')']'
     set_color normal
